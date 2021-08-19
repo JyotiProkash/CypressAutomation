@@ -1,1 +1,27 @@
-{}
+{
+    "baseUrl":"https://demoqa.com/automation-practice-form",
+    "chromeWebSecurity": false,
+    "defaultCommandTimeout": 4000,
+    "execTimeout": 60000,
+    "pageLoadTimeout": 60000,
+    "requestTimeout": 5000,
+    "responseTimeout": 30000,
+  
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporterOptions": {
+            "reportDir": "cypress/reports/mocha",
+            "quiet": true,
+            "overwrite": false,
+            "html": true,
+            "json": true
+        },
+        "videosFolder": "cypress/videos",
+        "screenshotsFolder": "cypress/screenshots",
+        "videoCompression": true,
+        "browser": "chrome"
+    },
+       "video": false
+
+}

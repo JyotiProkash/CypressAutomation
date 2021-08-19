@@ -1,7 +1,7 @@
-describe('Open Url',()=>{
-    it('Test open url', ()=>{
+describe('Test Dropdown',()=>{
+    it('Test select dropdown', ()=>{
         cy.visit(Cypress.config().baseUrl);
-        cy.title().should('include','ToolsQA')  
+        cy.title().should('include','ToolsQAs')  
     })
     
     // it('Test open url', ()=>{

@@ -4,3 +4,6 @@ fixtures
 2-advanced-examples
 plugins
 support
+mocha
+mochareports
+screenshots

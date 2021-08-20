@@ -1,11 +1,13 @@
 describe('Test Dropdown',()=>{
     it('Test select dropdown', ()=>{
         cy.visit(Cypress.config().baseUrl);
-        cy.title().should('include','ToolsQAs')  
+
+        // Enter value into input field
+        cy.get('#firstName').type('Jyoti Prokash') 
+        cy.get('#lastName').type('Mondal')
+        cy.get('#userEmail').type('abc@yahoo.com')
+
     })
     
-    // it('Test open url', ()=>{
-    //     cy.visit('https://demoqa.com/automation-practice-form');
-    //     cy.title().should('include','ToolsQA')  
-    // })
+
 })

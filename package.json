@@ -6,7 +6,7 @@
   "scripts": {
     "clean:reports": "rmdir /S /Q cypress\\reports && rmdir /S /Q cypress\\screenshots && rmdir /S /Q cypress\\videos && mkdir cypress\\reports\\mocha && mkdir cypress\\reports\\mochareports && mkdir cypress\\screenshots && mkdir cypress\\videos",
     "pretest": "npm run clean:reports",
-    "scripts": "cypress run --headed --spec cypress/integration/cypressautomation/checkboxselect.js --browser chrome",
+    "scripts": "cypress run --headed --spec cypress/integration/cypressautomation/dropdownselect.js --browser chrome",
     "combine-reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
     "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
     "posttest": "npm run combine-reports && npm run generate-report",

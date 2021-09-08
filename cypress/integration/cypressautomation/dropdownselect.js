@@ -27,11 +27,28 @@ describe('Test Dropdown',()=>{
     // Code for multiple select dropdown
     it('Test multiple items select from dropdown', ()=>{
         cy.visit('https://ej2.syncfusion.com/demos/#/material/multi-select/default.html')
-        cy.get('span.e-searcher>input[aria-labelledby="chip_default_1"]').click()
+        /*cy.get('span.e-searcher>input[aria-labelledby="chip_default_1"]').click()
         cy.wait(3000)
         cy.get('span.e-searcher>input[aria-labelledby="chip_default_1').type('Badmin{enter}')
-        cy.get('span.e-chipcontent').contains('Badminton').should('have.text','Badminton')
+        //cy.get('span.e-chipcontent').contains('Badminton').should('have.text','Badminton')
         cy.wait(3000)
+        cy.get('span.e-searcher>input[aria-labelledby="chip_default_1"]').click()
+        cy.get('span.e-searcher>input[aria-labelledby="chip_default_1').type('Crick{enter}')
+        cy.wait(3000)
+        cy.get('span.e-searcher>input[aria-labelledby="chip_default_1"]').click()
+        cy.get('span.e-searcher>input[aria-labelledby="chip_default_1').type('Footba{enter}')
+        cy.wait(3000)*/
+
+        //Alternative code for  multiple select dropdown
+        const sports = ["Badmin", "Crick", "Footba"];
+        for(let i=0;i<sports.length;i++)
+          {
+            cy.get('span.e-searcher>input[aria-labelledby="chip_default_1"]').click()
+            cy.wait(3000)
+            cy.get('span.e-searcher>input[aria-labelledby="chip_default_1').type(sports[i]+'{enter}')
+
+          }
+
     })
     
 })

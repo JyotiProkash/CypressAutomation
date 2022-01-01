@@ -16,13 +16,15 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.3.4",
-    "cypress": "^8.3.0",
+    "cypress": "^9.2.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-multi-reporters": "^1.5.0",
-    "mocha": "^9.0.3",
-    "mochawesome": "^6.2.2",
-    "mochawesome-merge": "^4.2.0",
-    "mochawesome-report-generator": "^5.2.0"
+    "mocha": "^9.1.3",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "caniuse-lite": "^1.0.30001294"
+  }
 }

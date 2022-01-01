@@ -1,5 +1,6 @@
 {
-    "baseUrl":"https://demoqa.com/automation-practice-form",
+    "baseUrl":"http://demo.automationtesting.in/Register.html",
+    "experimentalFetchPolyfill": true,
     "chromeWebSecurity": false,
     "defaultCommandTimeout": 4000,
     "execTimeout": 60000,

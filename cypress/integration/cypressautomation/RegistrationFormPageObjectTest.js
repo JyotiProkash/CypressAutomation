@@ -1,22 +1,28 @@
 import RegistrationFormPageObject from '../sourcepages/RegistrationFormPageObject'
 describe('Student Registration Form Fillup',function(){
+    before(function(){
+        cy.fixture('./dataDriven/registrationData.json').then(function(data){
+        this.data=data;
+
+        })
+    })
     it('Form fillup', function(){
         const registrationPageObject=new RegistrationFormPageObject()
         registrationPageObject.openRegistrationPage()
-        registrationPageObject.enterFirstName("Test First")
-        registrationPageObject.enterLastName("Test Last")
-        registrationPageObject.enterAddress("101 new avenue")
-        registrationPageObject.enterEmailAddress("abc@gmail.com")
-        registrationPageObject.enterPhoneNo("01712345678")
-        registrationPageObject.uploadPhoto("uploaded_file\\image1.jpg")
-        registrationPageObject.selectGender("FeMale","FeMale")
-        registrationPageObject.selectHobby("1","Cricket")
-        registrationPageObject.selectLanguage("8","English")
-        registrationPageObject.selectSkills("APIs")
-        registrationPageObject.selectCountry("Denmark")
-        registrationPageObject.selectDoB("1949","April","15")
-        registrationPageObject.enterPassword("123456")
-        registrationPageObject.enterConfirmPassword("123456")
+        registrationPageObject.enterFirstName(this.data.firstName)
+        registrationPageObject.enterLastName(this.data.lastName)
+        registrationPageObject.enterAddress(this.data.address)
+        registrationPageObject.enterEmailAddress(this.data.emailAddress)
+        registrationPageObject.enterPhoneNo(this.data.phoneNo)
+        registrationPageObject.uploadPhoto(this.data.photoPath)
+        registrationPageObject.selectGender(this.data.gender[0],this.data.gender[1])
+        registrationPageObject.selectHobby(this.data.hobby[0],this.data.hobby[1])
+        registrationPageObject.selectLanguage(this.data.language[0],this.data.language[1])
+        registrationPageObject.selectSkills(this.data.skills)
+        registrationPageObject.selectCountry(this.data.country)
+        registrationPageObject.selectDoB(this.data.doB[0],this.data.doB[1],this.data.doB[2])
+        registrationPageObject.enterPassword(this.data.password)
+        registrationPageObject.enterConfirmPassword(this.data.confirmPassword)
         registrationPageObject.submitButton()
     })
 })
